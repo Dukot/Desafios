@@ -1,0 +1,24 @@
+body {
+    background-color: rgb(70, 90, 107);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    width: 70%;
+    height: 100%;
+    margin: 0% auto 0% auto;
+}
+
+#days-of-week h3 {
+    color: yellow;
+    width: 100%;
+}
+
+#activities h2 {
+    background-color: yellow;
+    color: black;
+    border: 2px solid;
+    width: 100%;
+}
+
+#astronomy-class {
+    color: red;
+}

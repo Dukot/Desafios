@@ -1,0 +1,16 @@
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-family modifica o estilo da letra */
+    font-size: 20px;
+    /* font-size  aumenta o tamanho da letra*/
+    font-weight: 600;
+    /* font-weight aumenta a grossura da letra, gerando um efeito semelhante ao negrito */
+    /* Preciso adicionar esta extensão da linha amarela no meus vscode do PCdesktop */
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', cursive;
+    margin: 45px 0px 200px auto;
+    width: 15%;
+    border: 2px solid;
+}

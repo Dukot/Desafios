@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms </title>
+</head>
+
+<body>
+
+    <h3>Encontre no Google</h3>
+    <form action="https://www.google.com.br/search">
+        <label for="q">O que deseja pesquisar?</label>
+        <!-- Label referece a mensagem que você deseja colocar antes do input -->
+        <!-- q = atributo de pesquisa do Google -->
+
+        <input type="text" id="q" name="q" placeholder="Nasa, SpaceX, ..." required size="4" maxlength="4">
+        <!-- text referece ao tipo dos caracteres a serem pesquisados -->
+        <!-- size é referente ao número limite de caracteres(,.-) que poderam ser utilizados -->
+        <!-- maxlength é o número máximo de letras que se pode colocar na caixa -->
+        <!-- placdholder são os exemplos que seram disponibilizados antes da pesquisa -->
+
+        <input type="submit" value="Pesquisar">
+        <!-- submit cria um botão -->
+        <!-- value é o texto dentro do -->
+    </form>
+
+    <form action="https://www.google.com.br/search">
+        <label for="q">Qual email você busca?</label>
+        <input type="email" id="q" name="q" placeholder="fulano@siclano.com" required>
+        <!-- type="email" só vai receber textos com @ -->
+        <input type="submit" value="Busca">
+    </form>
+
+    <form action="https://www.google.com.br/search">
+        <label for="q">Qual email você busca?</label>
+        <input type="number" id="q" name="q" placeholder="1, 2, 3, ..." required min="0" max="100">
+        <!-- type="number" só vai receber números -->
+        <input type="submit" value="Busca">
+    </form>
+</body>
+
+</html>

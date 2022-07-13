@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro da Liga dos Astronautas</title>
+</head>
+
+<body>
+    <h2>Cadastro da Liga dos Astronautas</h2>
+
+    <form action="https://www.google.com.br/search" method="get" required>
+        <div>
+            <label for="q">Nome:</label>
+            <input type="text" id="q" name="q" maxlength="50" autocomplete="off" required>
+        </div>
+        <br>
+        <div>
+            <label for="q">Email:</label>
+            <input type="email" id="q" name="q" maxlength="50"> -
+            <label for="q">Password:</label>
+            <input type="password" id="q" name="q" maxlength="50">
+        </div>
+        <br>
+        <div>
+            <label for="Data de Nascimento">Data de Nascimento:</label>
+            <input type="date" id="Data de Nascimento" name="Data de Nascimento">
+            <input type="submit" value="Enviar"> -
+            <label for="Foto">Foto:</label>
+            <input type="file" name="Foto" id="Foto">
+        </div>
+        <br>
+        <div>
+            <label for="nationality">Nascionalidade:</label>
+            <select name="nationality" id="nationality">
+                <option value="russian">Russo</option>
+                <option value="brasilian">Brasileiro</option>
+                <option value="american">Americano</option>
+            </select> - Genero:
+            <label for="F">F</label>
+            <input type="radio" id="F" value="F" name="gener">
+            <label for="M">M</label>
+            <input type="radio" id="M" value="M" name="gener">
+        </div>
+        <br>
+        <div>
+            <p> Suas principais qualidades:</p>
+            <label for="inteligência">Inteligência</label>
+            <input type="checkbox" name="habilidades" id="inteligência">
+            <label for="resiliência">| Resiliência</label>
+            <input type="checkbox" name="habilidades" id="resiliência">
+            <label for="preparo físico">| Preparo físico</label>
+            <input type="checkbox" name="habilidades" id="preparo físico">
+            <label for="educação">| Educação</label>
+            <input type="checkbox" name="habilidaes" id="educação">|
+        </div>
+        <br>
+        <div>
+            <textarea name="messsage" id="message" cols="30" rows="10">No que você está pensando?</textarea>
+        </div>
+    </form>
+</body>
+
+</html>
