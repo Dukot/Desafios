@@ -38,7 +38,7 @@ function showMenu() {
     return option
 }
 
-function speedUp(velocity) {
+const speedUp = velocity => {
     let newVelocity = velocity + 5
     return newVelocity
 }

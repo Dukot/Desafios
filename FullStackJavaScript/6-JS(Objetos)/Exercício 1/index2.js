@@ -29,50 +29,16 @@
     PS: USE FUNÇÕES/ MÉTODOS À VONTADE
 */
 
-let spacecraft = {
+
+let spaceship = {
     velocity: 0,
     speedUp: function(acceleration) {
         this.velocity += acceleration
     }
 }
 
-function spacecraftRegistration() {
-    spacecraft.name = prompt("Informa o nome da Nave:")
-    spacecraft.type = prompt("Informe o tipo da nave:")
-    spacecraft.maxVelocity = Number(prompt("Informe a velocidade máxima da nave:"))
+function cadastroSpaceship() {
+    spaceship.name = prompt("Qual o nome da nave? ")
+    spaceship.type = prompt("Qual o tipo da nave? ")
+    spaceship.maxVelocity = prompt("Qual a velocidade máxima da nave? ")
 }
-
-function accelerate() {
-    let acceleration = Number(prompt("Quanto você deseja acelerar?"))
-    spacecraft.speedUp(acceleration)
-    if (spacecraft.velocity > spacecraft.maxVelocity) {
-        alert("VELOCIDADE MÁXIMA ULTRAPASSADA" +
-            "\nVelocidade da nave: " + spacecraft.velocity +
-            "\nVelocidade máxima: " + spacecraft.maxVelocity + "km/s")
-    }
-}
-
-function stop() {
-    alert("Nome: " + spacecraft.name + "\nTipo: " + spacecraft.type + "\nVelocidade atual: " + spacecraft.velocity + ("km/s"))
-    spacecraft.velocity = 0
-}
-
-function showMenu() {
-    let chosenOption
-    do {
-        chosenOption = prompt("Você deseja:\n1- Acelerar.\n2- Parar.")
-        switch (chosenOption) {
-            case "1":
-                accelerate()
-                break;
-            case "2":
-                stop()
-                break;
-            default:
-                alert("Opção inválida.")
-        }
-    } while (chosenOption != "2");
-}
-
-spacecraftRegistration()
-showMenu()
