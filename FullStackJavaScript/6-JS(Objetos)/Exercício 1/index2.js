@@ -37,8 +37,45 @@ let spaceship = {
     }
 }
 
-function cadastroSpaceship() {
+function registerSpaceship() {
     spaceship.name = prompt("Qual o nome da nave? ")
     spaceship.type = prompt("Qual o tipo da nave? ")
-    spaceship.maxVelocity = prompt("Qual a velocidade máxima da nave? ")
+    spaceship.maxVelocity = Number(prompt("Qual a velocidade máxima da nave? "))
 }
+
+function stopSpaceship() {
+    alert("Nave: " + spaceship.name +
+        "\nTipo: " + spaceship.type +
+        "\nVelocidade Final: " + spaceship.velocity)
+    spaceship.velocity = 0
+}
+
+function acelerateSpaceship() {
+    let acceleration = Number(prompt("Quanto você deseja acelerar? "))
+    spaceship.speedUp(acceleration)
+    if (spaceship.velocity > spaceship.maxVelocity) {
+        alert("Velocidade atual: " + spaceship.velocity +
+            "Velocidade máxima: " + spaceship.maxVelocity + "km/s" +
+            "\nVelocidade Máxima ultrapassada! PERIGO!")
+    }
+}
+
+function showMenu() {
+    let chosenOption
+    do {
+        chosenOption = prompt("Você deseja:\n1- Acelerar.\n2- Parar.")
+        switch (chosenOption) {
+            case "1":
+                acelerateSpaceship()
+                break;
+            case "2":
+                stopSpaceship()
+                break;
+            default:
+                alert("Opção inválida")
+        }
+    } while (chosenOption != "2");
+}
+
+registerSpaceship()
+showMenu()

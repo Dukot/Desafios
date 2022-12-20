@@ -21,46 +21,46 @@ Para esse exercício:
         *Caso o usuário escolha uma opção inválida, mostra o menu novamente.            
 */
 
-class Spacecraft {
+class Spaceship {
     constructor(name, crewQuantity) {
-        this.name = name
-        this.crewQuantity = crewQuantity
-        this.isHitched = false
-        this.entraceDoorsOpen = false
+        this.name = name;
+        this.crewQuantity = crewQuantity;
+        this.engage = false;
+        this.dor = false;
     }
     hitch() {
-        this.isHitched = true
-        this.entraceDoorsOpen = true
+        this.engage = true
+        this.dor = true
     }
-}
+};
+
+function registerSpaceship() {
+    let spaceshipName = prompt("Informe o nome da nave: ")
+    let crewQuantity = prompt("Informe o número de tripulantes: ")
+    let spaceship = new Spaceship(spaceshipName, crewQuantity)
+    return spaceship
+};
 
 function showMenu() {
     let chosenOption
     while (chosenOption != "1" && chosenOption != "2" && chosenOption != "3") {
-        chosenOption = prompt("O que deseja fazer?\n" +
-            "1- Engatar nave\n" +
-            "2- Imprimir naves\n" +
-            "3- Sair do programa")
+        chosenOption = prompt("O que deseja fazer?" +
+            "\n1- Engatar a nave" +
+            "\n2- Imprimir naves" +
+            "\n3- Sair do programa")
     }
     return chosenOption
 }
 
-function createSpacecraft() {
-    let spacecraftName = prompt("Informe o nome da nave")
-    let crewQuantity = prompt("Informe a quantidade tripulantes")
-    let spacecraft = new Spacecraft(spacecraftName, crewQuantity)
-    return spacecraft
+function printSpaceshipList(spaceships) {
+    let spaceshipList = ""
+    spaceships.forEach((spaceship, index) => {
+        spaceshipList += (index + 1) + "- " + spaceship.name + " ( " + spaceship.crewQuantity + " tripulantes )\n"
+    });
+    alert(spaceshipList)
 }
 
-function printListSpacecraft(spacecrafts) {
-    let spacecraftList = ""
-    spacecrafts.forEach((spacecraft, index) => {
-        spacecraftList += (index + 1) + "- " + spacecraft.name + " (" + spacecraft.crewQuantity + " tripulantes)\n"
-    })
-    alert(spacecraftList)
-}
-
-let listSpacecraft = []
+let spaceshipList = [];
 
 let chosenOption
 
@@ -68,12 +68,12 @@ while (chosenOption != "3") {
     chosenOption = showMenu()
     switch (chosenOption) {
         case "1":
-            let spacecraftToAdd = createSpacecraft()
-            spacecraftToAdd.hitch()
-            listSpacecraft.push(spacecraftToAdd)
+            let spaceshipToAdd = registerSpaceship()
+            spaceshipToAdd.hitch()
+            spaceshipList.push(spaceshipToAdd)
             break;
         case "2":
-            printListSpacecraft(listSpacecraft)
+            printSpaceshipList(spaceshipList)
             break;
     }
 }
